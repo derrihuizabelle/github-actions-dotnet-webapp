@@ -26,7 +26,7 @@ jobs:
     - name: Build
       run: dotnet build **/*.csproj --no-restore
 
- my_script:
+  my_script:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
