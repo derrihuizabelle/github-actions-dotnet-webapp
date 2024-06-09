@@ -26,11 +26,14 @@ jobs:
     - name: Build
       run: dotnet build **/*.csproj --no-restore
 
-  my_script:
+ my_script:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
+
+    - name: Set execute permissions for my-script.sh
+      run: chmod +x ./github4women/scripts/my-script.sh
 
     - name: Run my script
       run: ./github4women/scripts/my-script.sh
